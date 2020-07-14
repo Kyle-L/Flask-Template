@@ -1,6 +1,7 @@
 ## Flask Template
 
 - [Overview](#overview)
+- [Media](#media)
 - [Requirements](#requirements)
 - [Setup](#setup)
 - [License](#license)
@@ -9,11 +10,15 @@
 ## Overview
 This is repository serves as a template for a basic web application built using [Flask](https://flask.palletsprojects.com/en/1.1.x/) in Python.
 
-<a name="setup"/></a>
+<a name="media"/></a>
+## Media
+![Screennshot of homepage](docs/screenshots/screenshot-home.png)
+
+<a name="requirements"/></a>
 ## Requirements
-[] Git
-[] Python3
-[] An IDE of your choice
+- [ ] Git
+- [ ] Python3
+- [ ] An IDE of your choice
 
 <a name="setup"/></a>
 ## Setup
