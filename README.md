@@ -24,12 +24,12 @@ This repository serves as a template for a basic web application built using [Fl
 ## Setup
 1. Clone the repository.
 ```
-$ git clone url
+$ git clone git@github.com:Kyle-L/Flask-Template.git
 ```
 
 2. Check into the cloned repository.
 ```
-cd repo-name
+cd Flask-Template
 ```
 
 3. Install Pipenv using pip, install pip if you haven't already.
