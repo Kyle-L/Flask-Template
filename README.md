@@ -59,4 +59,4 @@ $ python app.py
 
 <a name="license"></a>
 ## License
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE.md)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
