@@ -8,7 +8,7 @@
 
 <a name="overview"/></a>
 ## Overview
-This is repository serves as a template for a basic web application built using [Flask](https://flask.palletsprojects.com/en/1.1.x/) in Python.
+This repository serves as a template for a basic web application built using [Flask](https://flask.palletsprojects.com/en/1.1.x/) in Python.
 
 <a name="media"/></a>
 ## Media
