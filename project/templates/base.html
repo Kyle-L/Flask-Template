@@ -31,6 +31,10 @@
     <!-- Main CSS stylesheet -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
 
+    <!-- Font Awesome -->
+    <script src="https://use.fontawesome.com/d81f892777.js"></script>
+
+
     <!-- Main JavaScript  stylesheet -->
     <script type=text/javascript src="{{ url_for('static', filename='js/main.js') }}"></script>
 
@@ -57,20 +61,20 @@
 
                     <!-- Items that appear only if the user is authenticated. -->
                     {% if current_user.is_authenticated %}
-                    {% for href, id, caption in navigation_bar_authenticated %}
-                    <li class="nav-item {% if id == active_page %} active {% endif %}">
-                        <a class="nav-link" href="{{ href|e }}">{{ caption|e }}</a>
-                    </li>
-                    {% endfor %}
+                        {% for href, id, caption in navigation_bar_authenticated %}
+                        <li class="nav-item {% if id == active_page %} active {% endif %}">
+                            <a class="nav-link" href="{{ href|e }}">{{ caption|e }}</a>
+                        </li>
+                        {% endfor %}
                     {% endif %}
 
                     <!-- Items that appear only if the user is unauthenticated. -->
                     {% if not current_user.is_authenticated %}
-                    {% for href, id, caption in navigation_bar_unauthenticated %}
-                    <li class="nav-item {% if id == active_page %} active {% endif %}">
-                        <a class="nav-link" href="{{ href|e }}">{{ caption|e }}</a>
-                    </li>
-                    {% endfor %}
+                        {% for href, id, caption in navigation_bar_unauthenticated %}
+                        <li class="nav-item {% if id == active_page %} active {% endif %}">
+                            <a class="nav-link" href="{{ href|e }}">{{ caption|e }}</a>
+                        </li>
+                        {% endfor %}
                     {% endif %}
                 </ul>
             </div>
@@ -88,8 +92,9 @@
 
     <!-- Footer Content -->
     <footer class="fixed-bottom py-5 bg-dark">
-        <div class="container">
-            <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
+        <div class="container text-center">
+            <p class="m-0 text-white">Copyright &copy; Your Website 2020</p>
+            <a class="m-0 text-white" href="https://github.com/HilariousAtlantic/miami-scheduler"><i class="fa fa-github" aria-hidden="true"></i> View Source</a>
         </div>
     </footer>
     <!-- End Footer Content -->
