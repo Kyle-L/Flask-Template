@@ -52,9 +52,23 @@ $ source env/bin/activate
 $ pip install -r requirements.txt
 ```
 
-7. Run the server.
+7. Set environment variables.
 ```
-$ python app.py
+$ export FLASK_APP=project
+$ export FLASK_DEBUG=1
+```
+
+8. Setup SQLite database using Flask-SQLAlchemy.
+```
+$ python3
+>> from project import db, create_app
+>> db.create_all(app=create_app())
+>> exit()
+```
+
+9. Run the server.
+```
+$ flask run
 ```
 
 <a name="license"></a>

@@ -4,6 +4,16 @@
     ('/license', 'license', 'License')
 ] -%}
 
+{% set navigation_bar_authenticated = [
+    ('/profile', 'profile', 'Profile'),
+    ('/logout', 'logout', 'Log Out')
+] -%}
+
+{% set navigation_bar_unauthenticated = [
+    ('/login', 'login', 'Login'),
+    ('/signup', 'signup', 'Sign Up')
+] -%}
+
 {% set active_page = active_page|default('home') -%}
 
 <!doctype html>
@@ -38,11 +48,30 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarResponsive">
                 <ul class="navbar-nav ml-auto">
+                    <!-- Items that appear in navbar regardless of authentication -->
                     {% for href, id, caption in navigation_bar %}
                     <li class="nav-item {% if id == active_page %} active {% endif %}">
                         <a class="nav-link" href="{{ href|e }}">{{ caption|e }}</a>
                     </li>
                     {% endfor %}
+
+                    <!-- Items that appear only if the user is authenticated. -->
+                    {% if current_user.is_authenticated %}
+                    {% for href, id, caption in navigation_bar_authenticated %}
+                    <li class="nav-item {% if id == active_page %} active {% endif %}">
+                        <a class="nav-link" href="{{ href|e }}">{{ caption|e }}</a>
+                    </li>
+                    {% endfor %}
+                    {% endif %}
+
+                    <!-- Items that appear only if the user is unauthenticated. -->
+                    {% if not current_user.is_authenticated %}
+                    {% for href, id, caption in navigation_bar_unauthenticated %}
+                    <li class="nav-item {% if id == active_page %} active {% endif %}">
+                        <a class="nav-link" href="{{ href|e }}">{{ caption|e }}</a>
+                    </li>
+                    {% endfor %}
+                    {% endif %}
                 </ul>
             </div>
         </div>
@@ -57,13 +86,14 @@
     </div>
     <!-- End Page Content -->
 
+    <!-- Footer Content -->
     <footer class="fixed-bottom py-5 bg-dark">
         <div class="container">
             <p class="m-0 text-center text-white">Copyright &copy; Your Website 2020</p>
         </div>
     </footer>
+    <!-- End Footer Content -->
 
-    <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
