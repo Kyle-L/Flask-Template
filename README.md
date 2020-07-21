@@ -21,7 +21,7 @@ This repository serves as a template for a basic web application built using [Fl
 - [ ] An IDE of your choice
 
 <a name="setup"/></a>
-## Setup
+## Local Setup
 1. Clone the repository.
 ```
 $ git clone git@github.com:Kyle-L/Flask-Template.git
@@ -58,7 +58,7 @@ $ export FLASK_APP=app
 $ export FLASK_DEBUG=1
 ```
 
-8. Setup SQLite database using Flask-SQLAlchemy.
+8. Setup Postgres database using Flask-SQLAlchemy.
 ```
 $ python3
 >> from app import db, create_app
