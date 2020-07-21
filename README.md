@@ -29,7 +29,7 @@ $ git clone git@github.com:Kyle-L/Flask-Template.git
 
 2. Check into the cloned repository.
 ```
-cd Flask-Template
+cd Flask-Template/project
 ```
 
 3. Install Pipenv using pip, install pip if you haven't already.
@@ -39,7 +39,7 @@ pip install pipenv
 
 4. Setup a virtual environment with Pipenv.
 ```
-$ python -m venv env
+$ python3 -m venv env
 ```
 
 5. Start the virtual environment
@@ -49,19 +49,19 @@ $ source env/bin/activate
 
 6. Install the requirements
 ```
-$ pip install -r requirements.txt
+$ pip3 install -r requirements.txt
 ```
 
 7. Set environment variables.
 ```
-$ export FLASK_APP=project
+$ export FLASK_APP=app
 $ export FLASK_DEBUG=1
 ```
 
 8. Setup SQLite database using Flask-SQLAlchemy.
 ```
 $ python3
->> from project import db, create_app
+>> from app import db, create_app
 >> db.create_all(app=create_app())
 >> exit()
 ```

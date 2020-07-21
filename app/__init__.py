@@ -18,8 +18,8 @@ def create_app():
     app.register_blueprint(auth_blueprint)
 
     # blueprint for non-auth parts of app
-    from .main import main as main_blueprint
-    app.register_blueprint(main_blueprint)
+    from .main import app as app_blueprint
+    app.register_blueprint(app_blueprint)
 
     from .errors import error as error_blueprint
     app.register_blueprint(error_blueprint)
