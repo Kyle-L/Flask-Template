@@ -18,6 +18,7 @@ This repository serves as a template for a basic web application built using [Fl
 ## Requirements
 - [ ] Git
 - [ ] Python3
+- [ ] Postgres
 - [ ] An IDE of your choice
 
 <a name="setup"/></a>
