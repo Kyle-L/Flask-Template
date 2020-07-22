@@ -30,7 +30,7 @@ $ git clone git@github.com:Kyle-L/Flask-Template.git
 
 2. Check into the cloned repository.
 ```
-cd Flask-Template/project
+cd Flask-Template/app
 ```
 
 3. Install Pipenv using pip, install pip if you haven't already.
